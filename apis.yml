@@ -1,22 +1,66 @@
 aid: harbor-lab
 name: Harbor Lab
-description: Harbor Lab is a company surfaced as a portfolio company of speedinvest and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Harbor Lab is an AI-powered port cost and disbursement account (DA) management
+  platform for the maritime industry, headquartered in Athens, Greece. Its cloud software
+  helps shipowners, ship managers, charterers, and port agents manage port calls, validate
+  and approve disbursement accounts, benchmark and negotiate port service pricing across a
+  marketplace of thousands of port service providers, and automate payment and settlement —
+  improving operational efficiency, digitizing the process, and delivering cost transparency
+  across port cost management. The company is backed by Speedinvest, VentureFriends, Atomico,
+  and others. As of this profile Harbor Lab exposes a web dashboard product only; no public
+  API, developer portal, or documentation surface was found.
 url: https://raw.githubusercontent.com/api-evangelist/harbor-lab/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - speedinvest
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: no-public-api-surface
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://dashboard.harborlab.com/img/pwa/logo-192x192.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Maritime
+- Shipping
+- Port Operations
+- Disbursement Accounts
+- Cost Management
+- Logistics
+- SaaS
 apis: []
+common:
+- type: Website
+  url: https://www.harborlab.com/
+- type: Login
+  url: https://dashboard.harborlab.com/authorization
+- type: Blog
+  url: https://www.harborlab.com/blog/
+- type: Support
+  url: https://www.harborlab.com/contact-us/
+- type: TermsOfService
+  url: https://www.harborlab.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://www.harborlab.com/privacy-policy/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
