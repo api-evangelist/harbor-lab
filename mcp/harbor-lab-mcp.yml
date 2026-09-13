@@ -1,0 +1,37 @@
+generated: '2026-09-11'
+method: probed
+source: https://mcp.harborlab.com/mcp
+status: published
+server:
+  name: harbor-lab
+  transport: http
+  url: https://mcp.harborlab.com/mcp
+deployment:
+  mode: remote
+  endpoint: https://mcp.harborlab.com/mcp
+  verified: probed
+  probe: live
+  checked: '2026-09-11'
+  source: docs-check 2026-09-12 (endpoint found in the provider's own documentation, then probed)
+tools_count: 9
+tools:
+- name: search_ports
+  description: ''
+- name: list_expenses
+  description: ''
+- name: calculate_husbandry_costs
+  description: ''
+- name: list_model_vessels
+  description: ''
+- name: request_estimation_by_imo
+  description: ''
+- name: request_estimation_by_details
+  description: ''
+- name: get_estimation_result
+  description: ''
+- name: sync_estimate_by_imo
+  description: ''
+- name: sync_estimate_by_details
+  description: ''
+tools_source: live tools/list via initialize handshake, 2026-09-12 (signals/audit_mcp_authorship.py --probe)
+authorship: provider
