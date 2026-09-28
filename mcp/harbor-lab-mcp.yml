@@ -16,22 +16,41 @@ deployment:
 tools_count: 9
 tools:
 - name: search_ports
-  description: ''
+  description: Search the HarborLab port registry by port name or UNLOCODE.  Returns matching ports with
+    their name, UNLOCODE, country code, and internal port ID. Use this to find the correct port when input
+    is ambiguous, or to confirm which port to use b
 - name: list_expenses
-  description: ''
+  description: List all available HCE expense groups and their line items.  Shows unit types, parameters,
+    default options, and all available choices for each expense. Use this to discover what services can
+    be requested and what options are available befor
 - name: calculate_husbandry_costs
-  description: ''
+  description: 'Calculate estimated husbandry costs for a vessel port call.  Resolves all port names,
+    group names, expense names, and option names internally — no internal IDs required. All returned monetary
+    values are in USD.  IMPORTANT RULES: 1. PORT IS'
 - name: list_model_vessels
-  description: ''
+  description: Return all active model vessels available in the HarborLab platform.  Use this to discover
+    what vessel types and sizes are supported before calling estimation endpoints with vessel details.
 - name: request_estimation_by_imo
-  description: ''
+  description: Submit an async port cost estimation request using a vessel's IMO number.  Returns a key
+    (UUID) you can pass to get_estimation_result once processing completes. Use this when you know the
+    IMO number of the vessel.
 - name: request_estimation_by_details
-  description: ''
+  description: Submit an async port cost estimation request using full vessel particulars.  Returns a
+    key (UUID) you can pass to get_estimation_result once processing completes. Use this when you do NOT
+    have an IMO number but have the vessel's technical d
 - name: get_estimation_result
-  description: ''
+  description: Poll for the result of a previously submitted estimation request.  Returns the full simulation
+    response including a breakdown of port expenses and a total cost when the task has completed. If the
+    task is still processing, the response will
 - name: sync_estimate_by_imo
-  description: ''
+  description: Run a port cost estimation synchronously using a vessel's IMO number.  Blocks until the
+    simulation completes and returns the full expense breakdown. Prefer this over the async flow for single
+    one-off queries.
 - name: sync_estimate_by_details
-  description: ''
+  description: Run a port cost estimation synchronously using full vessel particulars.  Blocks until the
+    simulation completes and returns the full expense breakdown. Use this when you do NOT have an IMO
+    number but have the vessel's technical details. Call
 tools_source: live tools/list via initialize handshake, 2026-09-12 (signals/audit_mcp_authorship.py --probe)
 authorship: provider
+descriptions_source: live tools/list (authorship probe or saved capture); filled by backfill-tools-from-authorship.py
+  --descriptions, 2026-09-28
