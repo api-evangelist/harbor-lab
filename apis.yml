@@ -41,7 +41,7 @@ accessModel:
 image: https://dashboard.harborlab.com/img/pwa/logo-192x192.png
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-10-06'
 tags:
 - Company
 - Maritime
@@ -62,6 +62,8 @@ tags_raw:
 - SaaS
 apis: []
 common:
+- url: https://www.harborlab.com/blog/feed/
+  type: BlogRSS
 - type: Website
   url: https://www.harborlab.com/
 - type: Login
